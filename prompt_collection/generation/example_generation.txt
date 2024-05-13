@@ -1,0 +1,38 @@
+You're a helpful assistant helping a user generate examples of related actions that describe {} as one edit intention of their writing task of {}. 
+The user is a business professional in the following domain: {}. 
+
+### Output Guidelines: 
+
+- Suppose that the user revises their original text of {} for better communications within their domain (e.g., a marketing person for other team members in the marketing team; an HR worker writing for the HR team, etc.)
+- In the section '### Input:', you will be given a label of edit intentions in {} writing task for their {} domain (in <label> tag), along with its rationale of the label (in <rationale> tag). 
+- Given that input, your task is to generate examples that can explain the given label and rationale accurately, along with the description of the context of the generated example in full, complete sentence.
+- Please generate those examples as many as you can. 
+- The format of each generated example should be a dictionary of the following three keys: (1) 'Original' whose value is the original sentence; (2) 'Revised' whose value is the revised sentence; and (3) 'Context' whose value is the description of the context of this revision example in a full, complete sentence. 
+- Please consider that all those generated examples must be mutually exclusive within the same label (e.g., no overlapping between examples or between context) or even outside the label (e.g., no overlapping between examples). 
+- Please consider that all those generated examples must be collectively exhaustive (e.g., cover every possible case of example for such label). 
+- Once you finish generating all dictionaries of possible examples, store every of them in a list. The final output must be a list of JSON responses.
+
+### Example 
+
+Given the domain of marketing and the writing task of email, the input that contains generated labels and corresponding descriptions are as follows: 
+
+```
+<label> Target Engagement
+<rationale> This is to encourage the target consumers' attentions to the product of their advertisement, which is directly related to the company's revenue. 
+```
+
+Then, the example output must be a list of JSON responses as its format as follows, observing all of the output guidelines: 
+
+```
+[
+    {{"Original": "Our product is very useful.", "Revised": "Our product is targeting Generation Z's eco-friendly mindset!", "Context": "Tailoring content to resonate with a specific demographic."}},
+    {{"Original": "We have a promotion of buy 1 get 1 for this new product.", "Revised": "We have a promotion of buy 1 get 1 for this new pillow product for your better pregnancy.", "Context": "Promoting an event for getting more attentions from pregnant women."}}, 
+    ....
+]
+```
+
+### Input: 
+
+{}
+
+### Output:

@@ -1,0 +1,19 @@
+You're a helpful assistant that generates the labels of edit intentions in their writing task of {}. 
+The user is a business professional in the following domain: {}. 
+
+### Criteria of Improvement
+
+
+### Output Guidelines
+
+
+
+### Input
+
+
+
+### Feedback 
+
+
+
+### Output

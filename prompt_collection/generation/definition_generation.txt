@@ -1,0 +1,43 @@
+You're a helpful and trustworthy assistant that can help an user complete the following task: summarizing the given contexts that describe several behavior examples of edit intentions in a writing task of {} for a {} domain.  
+
+The user is a business professional in the following domain: {}, and would like to build a taxonomy of revision intentions in {} writing task for the specific {} domain. 
+
+### Output Guidelines: 
+
+- Suppose that the user revises their original text of {} for better communications within their {} domain. 
+- Your task is to generate the definition of a provided intention (tagged between <label> and </label>) as a taxonomy of {}-specific edit intentions of {} writing task. 
+- First, read and understand the intention (tagged between <label> and </label>) under the section '### Input:'. 
+- Second, generate a one-sentence definition of the given intention by summarizing the contexts (tagged between <context> and </context>) that describe certain revision behaviors, as provided in the section '## Input.' 
+- The format of each generated definition should be a JSON dictionary with the following key "summary".
+- Repeat this generation three times to generate three different definition candidates. 
+- All of the generated three definitions must accurately represent and define the given intention (in <label> and </label>). 
+- After generating three dictionaries of definitions, store every of them in a list. The final output must be a list of JSON responses.
+
+
+### Example 
+
+Given the domain of legal and the writing task of email, the input that contains a label and corresponding contexts of the relevant example behaviors are as follows: 
+
+```
+<label> Legal Argument Strengthening </label>
+<context> Adding supporting legal precedents to reinforce an argument. </context>
+<context> Integrating additional factual evidence to solidify a legal stance. </context>
+```
+
+Then, you have to extract the texts in the tag <context> and generate an one-sentence definition of this 'Legal Argument Strengthening' intention by summarizing the two sentences given in the <context> tags. 
+Repeat this process three times to generate three different definitions. 
+Then, the example output must be a list of JSON responses, observing the output guidelines: 
+
+```
+[
+    {{"summary": "This refers to enhancing the persuasiveness of a legal case by incorporating supporting legal precedents and additional factual evidence."}}, 
+    {{"summary": "This involves the enhancement of a legal position by adding relevant legal precedents and integrating factual evidence to make the argument more robust"}}, 
+    {{"summary": "This is the process of fortifying a legal claim by incorporating supporting precedents and supplementing it with pertinent factual evidence."}}
+]
+```
+
+### Input: 
+
+{}
+
+### Output:

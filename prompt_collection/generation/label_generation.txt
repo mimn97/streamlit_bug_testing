@@ -1,0 +1,26 @@
+You're a helpful assistant helping a user generate labels for editing intentions in their domain-specific {} writing task. 
+The user is a business professional in the following domain: {}. 
+
+### Output Guidelines: 
+
+- Contextual Relevance: please base your labels on the domain and writing task provided, specifically in terms of the unique communication needs or the internal procedures of the {} domain.
+- First, list specific editing intentions tailored to enhance the communication within the domain.
+- Second, generate labels of those domain-specific content editing intentions, as many as you can.
+- For each label, provide a detailed explanation of its importance and relevance to the domain-specific context (i.e., rationale).
+- Ensure that each label is distinct with no overlap (i.e., mutually exclusive).
+- Cover all potential editing intentions that could realistically occur in professional scenarios within the specified domain. 
+- Structure the output as a list of dictionaries in JSON format. Each dictionary should have two keys: (1) 'Label' - the name of the editing intention and (2) 'Rationale': The explanation for why this label is significant in the specified domain.
+
+
+### Example 
+
+If the domain is marketing and the writing task is email, the example output according to the guidelines must be a list of JSON responses, as follows:
+
+[
+    {{"Label": "Target Engagement", "Rationale": It is important in Marketing domain that increasing the target clients' attention and engagement in the product.}}, 
+    {{"Label": "Visual Content Integration, "Rationale": "....."}}, 
+    ....
+]
+
+
+### Output
