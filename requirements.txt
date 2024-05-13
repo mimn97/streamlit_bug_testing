@@ -1,0 +1,5 @@
+streamlit==1.34.0
+streamlit-react-flow==0.0.3
+openai==1.26.0
+python-dotenv==1.0.1
+loguru==0.7.2
